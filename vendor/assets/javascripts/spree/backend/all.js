@@ -4,14 +4,14 @@
 // It's not advisable to add code directly here, but if you do, it'll appear at the bottom of the
 // the compiled file.
 //
-//= require jquery
-//= require rails-ujs
-//= require spree/backend
-//= require_tree .
-//= require spree/backend/solidus_paypal_commerce_platform
-//
 //= require turbolinks
 //
 // ... current file content
 //
 //= require spree/backend/turbolinks-integration.js
+//
+//= require jquery
+//= require rails-ujs
+//= require spree/backend
+//= require_tree .
+//= require spree/backend/solidus_paypal_commerce_platform
