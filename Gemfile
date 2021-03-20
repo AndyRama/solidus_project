@@ -6,7 +6,7 @@ ruby '2.6.6'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.5'
 # Use sqlite3 as the database for Active Record
-# gem 'pg'
+gem 'pg'
 gem 'sqlite3', '~> 1.4'
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
@@ -27,6 +27,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'solidus'
 # Use structure solidus Ecommerce stripe paiement
 gem 'solidus_stripe', '~> 3.0'
+gem 'dotenv-rails', groups: [:development, :test]
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
