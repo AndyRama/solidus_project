@@ -5,7 +5,7 @@ Spree.config do |config|
   # Core:
 
   # Default currency for new sites
-  config.currency = "EUR"
+  config.currency = "USD"
 
   # from address for transactional emails
   config.mails_from = "store@example.com"
@@ -78,30 +78,30 @@ Spree.config do |config|
   # Admin:
 
   # Custom logo for the admin
-  # config.admin_interface_logo = "logo/solidus.svg"
+  # config.admin_interface_logo = "images/solidus.
 
   # Gateway credentials can be configured statically here and referenced from
   # the admin. They can also be fully configured from the admin.
   #
   # Please note that you need to use the solidus_stripe gem to have
   # Stripe working: https://github.com/solidusio-contrib/solidus_stripe
-  #
-  # config.static_model_preferences.add(
-  #   Spree::PaymentMethod::StripeCreditCard,
-  #   'stripe_env_credentials',
-  #   secret_key: ENV['STRIPE_SECRET_KEY'],
-  #   publishable_key: ENV['STRIPE_PUBLISHABLE_KEY'],
-  #   server: Rails.env.production? ? 'production' : 'test',
-  #   test_mode: !Rails.env.production?
-  # )
+  config.static_model_preferences.add(
+    Spree::PaymentMethod::StripeCreditCard,
+    'stripe_env_credentials',
+    secret_key: ENV['STRIPE_SECRET_KEY'],
+    publishable_key: ENV['STRIPE_PUBLISHABLE_KEY'],
+    stripe_country: 'EUR',
+    v3_elements: false,
+    v3_intents: false
+  )
 end
 
 Spree::Frontend::Config.configure do |config|
-  config.locale = 'fr'
+  config.locale = 'en'
 end
 
 Spree::Backend::Config.configure do |config|
-  config.locale = 'fr'
+  config.locale = 'en'
 
   # Uncomment and change the following configuration if you want to add
   # a new menu item:
